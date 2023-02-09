@@ -1,0 +1,397 @@
+.rotating-lines-loading {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.bank-payment .bg {
+  height: 164px;
+  background: #F1F3FF;
+}
+
+.bank-payment .payment-nav {
+  width: 90%;
+  position: relative;
+  margin: auto;
+  margin-top: -56px;
+}
+
+.bank-payment .payment-nav .back-button {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.bank-payment .payment-nav .back-button h3 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding-left: 16px;
+}
+
+.bank-payment .payment-nav h4 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  padding-left: 40px;
+  letter-spacing: -0.8px;
+}
+
+.bank-payment .state-payment {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 15px;
+  padding-top: 4px;
+}
+
+.bank-payment .state-payment .one {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #0D28A6;
+  background: #0D28A6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bank-payment .state-payment .two {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #0D28A6;
+  background: #0D28A6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bank-payment .state-payment .three {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #000000;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #0D28A6;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bank-payment .state-payment h5 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  padding-left: 8px;
+}
+
+.bank-payment .state-payment img {
+  padding: 0 12px;
+}
+
+.bank-payment .bank-detail {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 56px;
+}
+
+.bank-payment .bank-detail .payment-deadline {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bank-payment .bank-detail .payment-deadline h3 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.bank-payment .bank-detail .payment-deadline p {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3C3C3C;
+  padding-top: 15px;
+}
+
+.bank-payment .bank-detail .transfer-detail {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.bank-payment .bank-detail .transfer-detail h3 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.bank-payment .bank-detail .transfer-detail .cont {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.bank-payment .bank-detail .transfer-detail .cont .bank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 61px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1px solid #D0D0D0;
+  border-radius: 4px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.bank-payment .bank-detail .transfer-detail .cont h5 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  padding-left: 16px;
+}
+
+.bank-payment .bank-detail .transfer-detail p {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  padding: 0 0 0 77px;
+}
+
+.bank-payment .bank-detail .transfer-detail h4 {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3C3C3C;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+.bank-payment .bank-detail .transfer-detail .account,
+.bank-payment .bank-detail .transfer-detail .total-payment {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #3C3C3C;
+  border-radius: 2px;
+  justify-content: space-between;
+}
+
+.bank-payment .bank-detail .transfer-detail .account .account-number {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3C3C3C;
+  padding-left: 12px;
+}
+
+.bank-payment .bank-detail .transfer-detail .total-payment .price-to-pay {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3C3C3C;
+  padding-left: 12px;
+}
+
+.bank-payment .bank-detail .transfer-detail button {
+  border: none;
+  background: none;
+  display: flex;
+}
+
+.bank-payment .bank-detail .payment-instr {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+  padding-bottom: 48px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.bank-payment .bank-detail .payment-instr h3 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding-bottom: 24px;
+}
+
+.bank-payment .bank-detail .payment-instr .bloc-tabs {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.bank-payment .bank-detail .payment-instr .bloc-tabs .tabs {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  background: #FFFFFF;
+  border-radius: 0;
+  border-color: #FFFFFF;
+  border-style: solid;
+  padding-top: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #EEEEEE;
+  width: 100%;
+  cursor: pointer;
+}
+
+.bank-payment .bank-detail .payment-instr .bloc-tabs .tabs.active-tabs {
+  font-weight: 700;
+  border-bottom: 1px solid #5CB85F;
+}
+
+.bank-payment .bank-detail .payment-instr .content {
+  display: none;
+}
+
+.bank-payment .bank-detail .payment-instr .active-content {
+  display: block;
+}
+
+.bank-payment .bank-detail .payment-instr ul {
+  padding-top: 16px;
+  padding-left: 24px;
+  list-style: disc;
+}
+
+.bank-payment .bank-detail .payment-instr ul li {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 175%;
+  color: #8A8A8A;
+}
+
+.bank-payment .bank-detail .confirm-payment {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.bank-payment .bank-detail .confirm-payment h5 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  letter-spacing: -0.2px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.bank-payment .bank-detail .confirm-payment button {
+  width: 100%;
+  height: 36px;
+  background: #5CB85F;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-top: 24px;
+}
+
+@media (max-width:767px) {
+  .bank-payment .bg {
+    height: 200px;
+  }
+
+  .bank-payment .payment-nav {
+    width: 100%;
+    margin-top: -100px;
+  }
+
+  .bank-payment .bank-detail {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .bank-payment .state-payment {
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .bank-payment .bank-detail .payment-instr .bloc-tabs .tabs.active-tabs {
+    font-weight: 700;
+    border-bottom: 1px solid #5CB85F;
+    font-size: 13px;
+  }
+}

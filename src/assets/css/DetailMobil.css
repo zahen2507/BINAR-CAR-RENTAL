@@ -1,0 +1,379 @@
+/* DATE PICKER STYLING */
+/* DATE PICKER STYLING */
+/* DATE PICKER STYLING */
+
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+  background-color: #35B0A7 !important;
+}
+
+.rs-btn-sm {
+  width: 265px !important;
+  background-color: #35B0A7 !important;
+  border-radius: 2px !important;
+}
+
+.rs-btn-primary.rs-btn-disabled,
+.rs-btn-primary:disabled {
+  width: 265px !important;
+  background-color: #35B0A7 !important;
+  border-radius: 2px !important;
+}
+
+
+.rs-picker-menu .rs-calendar .rs-calendar-table-header-row .rs-calendar-table-cell-content {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #222222;
+}
+
+.rs-picker-daterange-calendar-single {
+  width: 280px !important;
+}
+
+.rs-picker-daterange-menu .rs-picker-daterange-calendar-single .rs-calendar {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.rs-picker-daterange-header {
+  display: none;
+}
+
+.rs-picker-toolbar .rs-stack {
+  width: 0;
+}
+
+.rs-picker-toolbar-ranges {
+  display: none !important;
+}
+
+.rs-picker-daterange-menu .rs-picker-daterange-panel-show-one-calendar .rs-picker-toolbar {
+  width: 0;
+  padding: 8px;
+}
+
+.rs-calendar-table-row {
+  color: #222222 !important;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.rs-btn-icon.rs-btn-xs {
+  color: #222222 !important;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.rs-calendar-header-title {
+  color: #222222 !important;
+}
+
+.rs-calendar-table-cell {
+  color: #222222 !important;
+}
+
+.rs-picker-default .rs-picker-toggle.rs-btn-lg {
+  border: 1px solid #5CB85F !important;
+  border-radius: 2px !important;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.rs-picker-block {
+  display: block;
+  border: none !important;
+  border: 1px solid #5CB85F;
+
+  color: #3C3C3C !important;
+}
+
+.rs-picker-toggle-value {
+  color: #3C3C3C !important;
+}
+
+/* DATE PICKER STYLING */
+/* DATE PICKER STYLING */
+/* DATE PICKER STYLING */
+
+.btn:disabled {
+  background-color: rgba(53, 176, 167, 0.2) !important;
+  border-radius: 2px !important;
+}
+
+.css-1insrsq-control {
+  background: #D0D0D0 !important;
+  border: 1px solid #D0D0D0 !important;
+  border-radius: 2px !important;
+}
+
+input[disabled] {
+  background: #D0D0D0 !important;
+  border: 1px solid #D0D0D0 !important;
+  border-radius: 2px !important;
+}
+
+.backButton {
+  height: 200px;
+  background: #F1F3FF;
+  text-align: center;
+  padding-top: 100px;
+
+}
+
+.backButton a {
+  background: #5CB85F;
+  border-radius: 20px;
+  border-color: #5CB85F;
+  color: #FFFFFF;
+
+}
+
+.car-desc {
+  padding-top: 50px;
+}
+
+.car-desc-border {
+  width: 90%;
+  margin: auto;
+}
+
+.package-desc h3 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding: 20px 0 10px 20px;
+}
+
+.package-desc ul {
+  list-style: disc;
+}
+
+.package-desc li {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 175%;
+  color: #8A8A8A;
+  padding-bottom: 15px;
+  margin-left: 30px;
+}
+
+.package-desc .card {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.card-detail .card {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.card-img {
+  height: 350px;
+  object-fit: cover;
+  padding: 50px 25px;
+}
+
+.card-detail .card-body {
+  padding: 15px 25px;
+}
+
+.card-detail .card-body h5 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding: 4px 0 5px;
+  margin: 0;
+}
+
+.card-detail .card-body .category {
+  display: flex;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 14px;
+  color: #8A8A8A;
+}
+
+.card-detail .card-body .category p {
+  padding-left: 10px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0px;
+}
+
+.datebox h3 {
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 18px;
+  margin-bottom: 5px;
+}
+
+.price h4 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding: 4px 0;
+}
+
+.backButton2 {
+  padding-bottom: 10px;
+}
+
+.backButton2 a {
+  background: #5CB85F;
+  border-radius: 20px;
+  border-color: #5CB85F;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.btn:hover {
+  color: #212529;
+}
+
+.btn:focus {
+  color: #212529;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #C9E7CA;
+}
+
+.rs-picker-menu .rs-calendar .rs-calendar-table-cell-content {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 21px;
+  display: inline-block;
+}
+
+.rs-picker-toolbar-right-btn-ok {
+  text-align: center;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #3498ff;
+  width: 100px;
+}
+
+
+.btn-success {
+  border: none;
+  background-color: #5CB85F !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 10px;
+  border-radius: 2px;
+  width: 100%;
+  color: #FFFFFF;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+@media (max-width:991px) {
+  .car-desc-border {
+    width: 90%;
+    margin: auto;
+  }
+
+  .card-detail {
+    margin-top: 20px;
+  }
+
+  .card-img {
+    padding: 20px 25px 10px;
+  }
+
+  .price {
+    padding: 50px 0 20px;
+  }
+}
+
+.rs-picker-toggle-textbox {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.rs-picker-default .rs-picker-toggle {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media (max-width:767px) {
+  .package-desc h3 {
+    font-size: 12px;
+    line-height: 10px;
+    padding: 20px 0 10px 15px;
+  }
+
+  .package-desc li {
+    font-size: 12px;
+    line-height: 150%;
+    padding: 5px 0px;
+    margin-right: 15px;
+  }
+
+  .card-img {
+    height: 200px;
+    padding: 25px 15px 15px;
+  }
+
+  .card-detail .card-body {
+    padding: 15px 15px;
+  }
+
+  .package-desc .card {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding-bottom: 10px;
+  }
+}

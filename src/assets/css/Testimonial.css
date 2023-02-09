@@ -1,0 +1,77 @@
+.testimonial {
+  padding-top: 60px;
+  max-width: 150%;
+}
+
+.testi-head {
+  padding: 8px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testi-head h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+  padding: 8px 0;
+}
+
+.testi-head h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding: 8px 0;
+}
+
+.owl-carousel .card-body {
+  display: flex;
+  background: #F1F3FF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  align-items: center;
+  padding: 50px;
+  margin: 0 15px;
+}
+
+.owl-carousel .card-body p {
+  text-align: justify;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding-bottom: 8px;
+}
+
+.owl-carousel .card-body h4 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.rate {
+  padding-bottom: 8px;
+}
+
+@media (max-width:991px) {
+  .rate {
+    margin: 24px 0;
+    text-align: center;
+  }
+  .owl-carousel .card-body {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+}
+
+@media (max-width:767px) {
+  .rate {
+    text-align: center;
+  }
+}

@@ -1,0 +1,174 @@
+.header-nav {
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  background: #F1F3FF;
+  z-index: 99;
+}
+
+.logo {
+  width: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img:hover {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  padding: 0px;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  margin-left: 32px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbar a.btn {
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #5CB85F;
+  color: white;
+  border-radius: 2px;
+  margin-top: 0;
+  /* padding: 8px 12px; */
+}
+
+.logoutbtn {
+  background-color: white !important;
+  color: #0D28A6 !important;
+  border: 1px solid #0D28A6 !important;
+  border-radius: 2px !important;
+
+}
+
+
+a.btn:hover {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.logoutbtn:hover {
+  color: #0D28A6 !important;
+}
+
+
+.navbar a:hover {
+  color: #00ac11;
+  text-decoration: underline;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.top-sidebar {
+  display: none;
+}
+
+.logo-sidebar img:hover {
+  width: 40%;
+}
+
+li.buttonregist {
+  margin: 0;
+}
+
+.overlay-bg {
+  display: none;
+}
+
+.burger-icon {
+  display: none;
+}
+
+@media (max-width:540px) {
+  .navbar a {
+    margin-left: 0 !important;
+  }
+
+  .navbar li {
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+  }
+}
+
+@media (max-width:767px) {
+  .burger-icon {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .burger-icon img {
+    width: 40px;
+  }
+
+  .sidebar {
+    position: absolute;
+    width: 180px;
+    height: 100vh;
+    top: 0;
+    right: -180px;
+    padding-top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    transition: 1s;
+  }
+
+  .sidebar.navbar-active {
+    right: 0px;
+  }
+
+  .top-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-sidebar img {
+    max-width: 50%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar li {
+    padding-top: 16px;
+    margin-left: 32px;
+  }
+
+  .navbar a {
+    margin-left: 16px;
+  }
+
+  .overlay-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+  }
+
+  .overlay-bg.navbar-active {
+    display: block;
+  }
+}

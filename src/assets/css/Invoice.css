@@ -1,0 +1,296 @@
+@font-face {
+  font-family: "DejaVu Sans";
+  src: url("https://kendo.cdn.telerik.com/2017.2.621/styles/fonts/DejaVu/DejaVuSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DejaVu Sans";
+  font-weight: bold;
+  src: url("https://kendo.cdn.telerik.com/2017.2.621/styles/fonts/DejaVu/DejaVuSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DejaVu Sans";
+  font-style: italic;
+  src: url("https://kendo.cdn.telerik.com/2017.2.621/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DejaVu Sans";
+  font-weight: bold;
+  font-style: italic;
+  src: url("https://kendo.cdn.telerik.com/2017.2.621/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf") format("truetype");
+}
+
+.invoice {
+  width: 100%;
+  /* width: 6.2in; */
+  height: 8.7in;
+  background: #ffffff;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 75%);
+  padding: 20px;
+}
+
+.invoice .invoice-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoice .invoice-hero img {
+  width: 100px;
+  padding-top: 0;
+}
+
+.invoice .invoice-hero .invoice-date {
+  text-align: left;
+  border-left: 4px solid #5CB85F;
+  padding-left: 5px;
+}
+
+.invoice .invoice-hero .invoice-date h1 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000000;
+}
+
+.invoice .invoice-hero .invoice-date p {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+  padding-top: 8px;
+}
+
+.invoice .payment-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.invoice .payment-details h2 {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000000;
+  background: #0bd32b29;
+  padding-top: 0;
+  padding-left: 10px;
+  margin-top: 40px;
+  height: 24px;
+}
+
+.invoice .payment-details .col-3 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.invoice .payment-details .col-9 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.invoice .payment-details p {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.invoice .customer-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.invoice .customer-details h2 {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000000;
+  background: #0bd32b29;
+  padding-top: 0;
+  padding-left: 10px;
+  margin-top: 24px;
+  height: 24px;
+}
+
+.invoice .customer-details .col-3 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.invoice .customer-details .col-9 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.invoice .customer-details p {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.invoice .company-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.invoice .company-details h2 {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000000;
+  background: #0bd32b29;
+  padding-top: 0;
+  padding-left: 10px;
+  margin-top: 24px;
+  height: 24px;
+}
+
+.invoice .company-details .col-3 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.invoice .company-details .col-9 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.invoice .company-details p {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.invoice .purchase-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.invoice .purchase-details h2 {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000000;
+  background: #0bd32b29;
+  padding-top: 0;
+  padding-left: 10px;
+  margin-top: 24px;
+  height: 24px;
+}
+
+.invoice .purchase-details p {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+  height: 24px;
+  width: 100%;
+}
+
+.invoice .purchase-details h4 {
+  display: flex;
+  align-items: center;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+  height: 24px;
+  width: 100%;
+}
+
+.invoice .purchase-details .col-3 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.invoice .purchase-details .col-9 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.invoice .thank-you {
+  margin-top: 30px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.invoice img {
+  width: 25px;
+  padding-top: 10px;
+}
+
+.invoice .copyright {
+  padding-top: 25px;
+}
+
+.invoice .copyright h4 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.invoice .copyright img {
+  padding-top: 5px;
+  width: 10%;
+}

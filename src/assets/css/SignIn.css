@@ -1,0 +1,151 @@
+.login {
+    width: 100%;
+    height: 100vmax !important;
+    position: fixed;
+    z-index: 0 !important;
+}
+
+.login-kiri {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #FFFFFF;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    flex: 1;
+    justify-content: flex-start !important;
+}
+
+.login-konten {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 
+img.homelogo {
+    margin-bottom: 32px;
+} */
+
+.form-control {
+    color: black;
+    font-weight: 500;
+}
+
+img.closelogo {
+    width: 28px !important;
+    visibility: hidden;
+}
+
+.logo-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-login a {
+    display: flex;
+    align-items: center;
+}
+
+.login-konten h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 32px 0px;
+}
+
+.login-konten h3 {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+}
+
+.login-konten .btn {
+    background: #0D28A6;
+    border-radius: 2px;
+}
+
+.login-konten .mb-3 {
+    width: 350px;
+}
+
+
+.bawah-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.btn {
+    margin-top: 15px;
+}
+
+.bawah-button h3 {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.bawah-button h4 {
+    margin-left: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-decoration-line: underline;
+    color: #0D28A6;
+}
+
+.login-konten h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.login-kanan {
+    height: 100vmax;
+    padding: 0 !important;
+}
+
+.login-kanan img {
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width:540px) {
+    .login-kiri {
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        padding: 30px 16px;
+    }
+
+    img.closelogo {
+        visibility: visible;
+    }
+}
+
+@media (max-width:996px) {
+    img.closelogo {
+        visibility: visible;
+    }
+}

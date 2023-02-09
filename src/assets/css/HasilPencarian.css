@@ -1,0 +1,153 @@
+.car-choice {
+  padding-top: 40px;
+}
+
+.rotating-lines-loading {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.car-choice-border {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.car-choice-border .card-border {
+  margin-top: 25px;
+}
+
+.car-choice-border .card {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+.car-choice img {
+  height: 350px;
+  object-fit: cover;
+  padding: 80px 20px;
+}
+
+.car-choice .card-body {
+  padding: 0 20px;
+}
+
+.car-choice .card-body h5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding: 4px 0 5px;
+  margin: 0;
+}
+
+.car-choice .card-body h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  padding: 4px 0;
+}
+
+.car-choice .card-body p {
+  font-weight: 700;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding: 4px 0;
+}
+
+.car-choice .card-body a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  background: #5CB85F;
+  border-radius: 2px;
+  border-color: #5CB85F;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  margin: 20px 0;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.car-choice-border .btn:hover {
+  color: #212529 !important;
+}
+
+.car-choice-border .btn:focus {
+  color: #212529 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #C9E7CA;
+}
+
+.car-choice .noData {
+  text-align: center;
+}
+
+.car-choice .noData img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.car-choice .noData h3 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.car-choice .noData h4 {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  padding-top: 20px;
+  color: red;
+}
+
+@media (max-width:991px) {
+  .card-border {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .car-choice .card-body {
+    padding: 0 15px;
+  }
+
+  .car-choice-border .card-border {
+    margin: 25px 0 0;
+  }
+
+  .car-choice img {
+    height: 250px;
+    object-fit: cover;
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width:767px) {
+  .car-choice-border {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* .car-choice img {
+    height: 250px;
+    object-fit: cover;
+    padding: 50px 20px;
+  } */
+}

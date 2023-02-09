@@ -1,0 +1,68 @@
+.why-us {
+  padding-top: 100px;
+}
+
+.why-head {
+  padding: 8px 0;
+}
+
+.why-head h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+  padding: 8px 0;
+}
+
+.why-head h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding: 8px 0;
+}
+
+.why-border {
+  margin-top: 20px;
+}
+
+.why-content {
+  padding: 10px;
+  padding-right: 20px;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #D0D0D0;
+  border-radius: 8px;
+}
+
+.why-content img {
+  padding: 10px;
+}
+
+.why-content h4 {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.why-content h5 {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+@media (max-width:991px) {
+  .why-us {
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .why-head {
+    text-align: center;
+  }
+}

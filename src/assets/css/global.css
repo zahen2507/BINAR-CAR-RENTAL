@@ -1,0 +1,17 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: black;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* hide scrollbar Firefox */
+  -ms-overflow-style: none;
+  /* hide scrollbar Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+  /* hide scrollbar WebKit */
+  width: 0;
+  height: 0;
+}

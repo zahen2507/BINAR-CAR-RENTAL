@@ -1,0 +1,25 @@
+.count1day {
+  display: flex;
+}
+
+.count1day .clock1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count1day .clock1 span {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #FFFFFF;
+  width: 25px;
+  height: 25px;
+  background: #FA2C5A;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  margin: 0 5px;
+}

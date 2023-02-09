@@ -1,0 +1,45 @@
+.faq {
+  padding-top: 100px;
+}
+
+.faq h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.faq h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  padding-top: 16px;
+}
+
+.accordion-border {
+  border: none;
+}
+
+.accordion-item {
+  margin-bottom: 16px;
+  background: #FFFFFF;
+  border: 1px solid #D4D4D4;
+  border-radius: 4px;
+}
+
+@media (max-width:991px) {
+  .faq {
+    padding-top: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .faq-head {
+    text-align: center;
+  }
+
+  .accordion {
+    padding-top: 40px;
+  }
+}
