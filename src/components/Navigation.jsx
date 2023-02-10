@@ -82,7 +82,43 @@ const Header = () => {
                                 <img src={Menu} alt="" />
                             </div>
                         </>
-                    ) : null}
+                    ) : 
+                    (
+                        <>
+                        <div className={`overlay-bg ${active ? 'navbar-active' : ''}`} />
+                            <div className={`sidebar ${active ? 'navbar-active' : ''}`}>
+                                <div className="top-sidebar">
+                                    <Link to={"/"} className="logo-sidebar">
+                                        <img src={Logo} alt="" />
+                                    </Link>
+                                    <div className="close-button" onClick={closeSidebar}>
+                                        <img className="" src={CloseButton} alt="" />
+                                    </div>
+                                </div>
+                                <ul className="navbar">
+                                    <li>
+                                        <a href='/#our-services'>Our Services</a>
+                                    </li>
+                                    <li>
+                                        <a href='/#why-us'>Why Us</a>
+                                    </li>
+                                    <li>
+                                        <a href='/#testimonial'>Testimonial</a>
+                                    </li>
+                                    <li>
+                                        <a href='/#faq'>FAQ</a>
+                                    </li>
+                                    <li className='buttonregist'>
+                                        {accessToken ? <LogoutButton /> : <RegisterButton />}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="burger-icon" onClick={openSidebar}>
+                                <img src={Menu} alt="" />
+                            </div>
+                        </>
+                    )
+                    }
                 </div>
             </div>
         </header>

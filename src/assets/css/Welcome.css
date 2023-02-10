@@ -1,12 +1,14 @@
 .hero-section {
-  background: #F1F3FF;
-  padding-top: 150px;
+  background: #f1f3ff;
+  /* padding-top: 150px; */
+  padding-top: 231px;
   position: relative;
   color: black;
 }
 
 .hero-content {
-  padding: 110px 0;
+  /* padding: 110px 0; */
+  padding-bottom: 215px;
 }
 
 .hero-content h1 {
@@ -26,20 +28,20 @@
 
 .hero-content a {
   position: absolute;
-  background: #5CB85F;
-  border-color: #5CB85F;
+  background: #5cb85f;
+  border-color: #5cb85f;
   border-radius: 2px;
   padding: 8px 12px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .hero-content.btn:focus {
   color: #212529;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem #C9E7CA;
+  box-shadow: 0 0 0 0.25rem #c9e7ca;
 }
 
 .hero-thumbnail {
@@ -53,15 +55,17 @@
   width: 100%;
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .hero-section {
-    padding-top: 100px;
+    /* padding-top: 100px; */
+    padding-top: 110px;
   }
 
   .hero-content {
     padding-top: 0;
     padding-right: 15px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
+    padding-bottom: 121px;
   }
 
   .hero-content h1 {
@@ -80,7 +84,7 @@
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .hero-section {
     padding-top: 80px;
   }

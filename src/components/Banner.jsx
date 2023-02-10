@@ -10,7 +10,7 @@ const CtaBanner = () => {
                     <h1>Sewa Mobil di (Lokasimu) Sekarang</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
-                    <Link to={'/find-car'} className="btn">Mulai Sewa Mobil</Link>
+                    <Link to={'/cari-mobil'} className="btn">Mulai Sewa Mobil</Link>
                 </div>
             </div>
         </section>
