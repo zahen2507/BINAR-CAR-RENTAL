@@ -7,7 +7,7 @@
 }
 
 .logo {
-  width: 100px;
+  width: 124px;
   display: flex;
   align-items: center;
 }
@@ -26,8 +26,8 @@
   margin-left: 32px;
   font-family: 'Arial';
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   color: #000000;
@@ -36,13 +36,15 @@
 .navbar a.btn {
   border: none;
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
   line-height: 20px;
   background-color: #5CB85F;
   color: white;
-  border-radius: 2px;
+  border-radius: 20px;
   margin-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   /* padding: 8px 12px; */
 }
 
@@ -51,12 +53,17 @@
   color: #0D28A6 !important;
   border: 1px solid #0D28A6 !important;
   border-radius: 2px !important;
-
+  
 }
 
+.navbar a:hover {
+  color: #0D28A6 !important;
+  text-decoration: none;
+}
 
 a.btn:hover {
-  color: black !important;
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(41, 153, 45);
   text-decoration: none !important;
 }
 
@@ -65,10 +72,6 @@ a.btn:hover {
 }
 
 
-.navbar a:hover {
-  color: #00ac11;
-  text-decoration: underline;
-}
 
 .sidebar {
   flex: 1;

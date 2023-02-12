@@ -2,6 +2,7 @@ import React from 'react';
 import ReactOwlCarousel from 'react-owl-carousel';
 import ImgTesti1 from '../assets/images/img_testi_1.webp';
 import ImgTesti2 from '../assets/images/img_testi_2.webp';
+import ImgTesti3 from '../assets/images/img_testi_3.png';
 import Rate from '../assets/icons/star.svg';
 import '../assets/css/Testimonial.css';
 import '../assets/owl-carousel/owl.carousel.css'
@@ -83,7 +84,7 @@ const Testimonial = () => {
                                         amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur
                                         adipiscing
                                         elit, sed do eiusmod”</p>
-                                    <h4>John Dee 32, Bromo</h4>
+                                    <h4>Jessica Smith 27, Jakarta</h4>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +95,7 @@ const Testimonial = () => {
                         <div className="card-item">
                             <div className="card-body">
                                 <div className="col-3">
-                                    <img src={ImgTesti2} alt="" />
+                                    <img src={ImgTesti3} alt="" />
                                 </div>
                                 <div className="col-9">
                                     <div className="rate">
@@ -108,7 +109,7 @@ const Testimonial = () => {
                                         amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur
                                         adipiscing
                                         elit, sed do eiusmod”</p>
-                                    <h4>John Dee 32, Bromo</h4>
+                                    <h4>Sarah Johnson 35, Bali</h4>
                                 </div>
                             </div>
                         </div>
