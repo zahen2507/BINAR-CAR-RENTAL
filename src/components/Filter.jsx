@@ -77,7 +77,7 @@ const Filter = (filterData) => {
                                                 onClick={overlayActive}
                                                 className="form-control"
                                                 placeholder={placeholder2}
-                                                styles={{
+                                                style={{
                                                     placeholder: (base) => ({
                                                         ...base,
                                                         fontSize: '10px'
