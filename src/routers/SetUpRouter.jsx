@@ -22,7 +22,7 @@ const WithAuth = () => {
   );
 };
 
-const SetUpRouter = () => {
+const SetupRouter = () => {
   const location = useLocation();
 
   return (
@@ -46,9 +46,9 @@ const SetUpRouter = () => {
           <Route path="/payment/bank-confirm" element={<BankConfirm />} />
           <Route path="/payment/:id" element={<Payment />} />
           <Route path="/payment/bank-confirm/e-ticket" element={<ETicket />} />
-          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
+      <Route path="*" element={<NotFoundPage />} />
       {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && (
         <Footer />
       )}
@@ -56,4 +56,4 @@ const SetUpRouter = () => {
   );
 };
 
-export default SetUpRouter;
+export default SetupRouter;

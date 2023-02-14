@@ -15,8 +15,8 @@ const OurServices = () => {
                     </div>
                     <div className="col-lg-6 col-md-12">
                         <div className="services-desc">
-                            <h3>Best Car Rental for any kind of trip in (Lokasimu)!</h3>
-                            <p>Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain,
+                            <h3>Best Car Rental for any kind of trip in Indonesia!</h3>
+                            <p>Sewa mobil di Indonesia bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain,
                                 kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding,
                                 meeting, dll.</p>
                             <ul>

@@ -1,8 +1,8 @@
 import React from "react";
-import SetUpRouter from "./routers/SetUpRouter";
+import SetupRouter from "./routers/SetupRouter";
 
 function App() {
-  return <SetUpRouter />;
+  return <SetupRouter />;
 }
 
 export default App;

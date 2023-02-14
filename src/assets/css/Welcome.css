@@ -30,7 +30,7 @@
   position: absolute;
   background: #5cb85f;
   border-color: #5cb85f;
-  border-radius: 2px;
+  border-radius: 20px;
   padding: 8px 12px;
   font-weight: 700;
   font-size: 14px;
@@ -38,8 +38,13 @@
   color: #ffffff;
 }
 
+.hero-content a:hover {
+  color: #ffffff;
+  background-color: rgb(41, 153, 45);
+}
+
 .hero-content.btn:focus {
-  color: #212529;
+  color: #ffffff;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #c9e7ca;
 }
