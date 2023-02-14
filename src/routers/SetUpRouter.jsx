@@ -47,8 +47,8 @@ const SetupRouter = () => {
           <Route path="/payment/:id" element={<Payment />} />
           <Route path="/payment/bank-confirm/e-ticket" element={<ETicket />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <Route path="*" element={<NotFoundPage />} />
       {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && (
         <Footer />
       )}
