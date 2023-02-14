@@ -10,6 +10,7 @@ import Signin from "../pages/SignIn";
 import Payment from "../pages/Payment";
 import BankConfirm from "../pages/BankConfirm";
 import ETicket from "../pages/ETicket";
+import NotFoundPage from "../components/NotFoundPage";
 
 const WithAuth = () => {
   const isAuth = window.localStorage.getItem("access_token");
@@ -47,6 +48,7 @@ const SetupRouter = () => {
           <Route path="/payment/bank-confirm/e-ticket" element={<ETicket />} />
         </Route>
       </Routes>
+      <Route path="*" element={<NotFoundPage />} />
       {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && (
         <Footer />
       )}
