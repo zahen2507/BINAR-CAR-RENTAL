@@ -1,5 +1,5 @@
 import React from "react";
-import SetupRouter from "./router/SetupRouter";
+import SetupRouter from "./routers/SetUpRouter";
 
 function App() {
   return <SetupRouter />;

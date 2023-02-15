@@ -11,6 +11,7 @@ import Payment from "../pages/Payment";
 import BankConfirm from "../pages/BankConfirm";
 import ETicket from "../pages/ETicket";
 import Auth from "../utils/Auth"
+import NotFoundPage from "../components/NotFoundPage";
 
 const WithAuth = () => {
   const isAuth = Auth.isAuthorization()
@@ -47,6 +48,7 @@ const SetupRouter = () => {
           <Route path="/payment/:id" element={<Payment />} />
           <Route path="/payment/bank-confirm/e-ticket" element={<ETicket />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       {location.pathname !== "/sign-in" && location.pathname !== "/sign-up" && (
         <Footer />
