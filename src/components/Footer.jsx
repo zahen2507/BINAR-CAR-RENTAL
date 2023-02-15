@@ -6,7 +6,7 @@ import IgIcon from "../assets/icons/icon_instagram.svg";
 import TwtIcon from "../assets/icons/icon_twitter.svg";
 import MailIcon from "../assets/icons/icon_mail.svg";
 import TwcIcon from "../assets/icons/icon_twitch.svg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
