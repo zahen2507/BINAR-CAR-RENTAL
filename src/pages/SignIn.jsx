@@ -1,30 +1,66 @@
-import { useState, React } from "react";
+import { React, useEffect } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import APIAuth from "../apis/APIAuth";
 import Loginkanan from "../assets/images/login.svg";
 import Logologin from "../assets/images/logo.svg";
 import Closelogo from "../assets/images/close.svg";
 import "../assets/css/SignIn.css";
+// import { useState } from "react";
+// import axios from "axios";
 
-const Signin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const SignIn = () => {
+  useEffect(() => {
+    document.title = "Binar Car Rental - Sign In for Rent";
+  }, []);
+  //   const [email, setEmail] = useState("");
+  //   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+
+  //     axios
+  //       .post("https://bootcamp-rent-cars.herokuapp.com/customer/auth/login", {
+  //         email,
+  //         password,
+  //       })
+  //       .then((res) => {
+  //         window.localStorage.setItem("access_token", res.data.access_token);
+  //         window.localStorage.setItem("email_customer", res.data.email);
+  //         window.location.href = "/find-car";
+  //       })
+  //       .catch((e) => console.log(e));
+  //   };
+
+  const navigate = useNavigate();
+  const { search } = useLocation();
+  const onFinish = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+    const password = formData.get("password");
 
-    axios
-      .post("https://bootcamp-rent-cars.herokuapp.com/customer/auth/login", {
-        email,
-        password,
-      })
-      .then((res) => {
-        window.localStorage.setItem("access_token", res.data.access_token);
-        window.localStorage.setItem("email_customer", res.data.email);
-        window.location.href = "/";
-      })
-      .catch((e) => console.log(e));
+    const payload = {
+      email,
+      password,
+    };
+    const handleSubmit = async () => {
+      try {
+        await APIAuth.login(payload);
+        alert("Login Success!");
+        let returnTo = "/";
+        const params = new URLSearchParams(search);
+        const redirectTo = params.get("return_to");
+        if (redirectTo) returnTo += `${redirectTo}`;
+        setTimeout(() => {
+          navigate(returnTo);
+        }, 1000);
+      } catch (error) {
+        const err = new Error(error);
+        console.log(err.response.data);
+      }
+    };
+    handleSubmit();
   };
 
   return (
@@ -43,15 +79,16 @@ const Signin = () => {
                   </Link>
                 </div>
                 <h1>Welcome Back! </h1>
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={onFinish}>
                   <Form.Group className="mb-3 email" controlId="formBasicEmail">
                     <Form.Label>
                       <h3>Email</h3>
                     </Form.Label>
                     <Form.Control
                       type="email"
+                      name="email"
                       placeholder="Contoh: johndee@gmail.com"
-                      onChange={(e) => setEmail(e.target.value)}
+                      //   onChange={(e) => setEmail(e.target.value)}
                     />
                     {/* <Form.Text className="text-muted">
                                 We'll........... nev,,,,,,,er share your email with anyone else.
@@ -66,8 +103,9 @@ const Signin = () => {
                     </Form.Label>
                     <Form.Control
                       type="password"
+                      name="password"
                       placeholder="6+ karakter"
-                      onChange={(e) => setPassword(e.target.value)}
+                      //   onChange={(e) => setPassword(e.target.value)}
                     />
                   </Form.Group>
                   <div className="d-grid gap-2">
@@ -96,4 +134,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default SignIn;

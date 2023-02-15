@@ -4,12 +4,15 @@ import "../assets/css/Navigation.css";
 import Logo from "../assets/images/logo.svg";
 import Menu from "../assets/icons/menu.png";
 import CloseButton from "../assets/icons/close.svg";
+import LogoutButton from "./ButtonLogout";
+import RegisterButton from "./ButtonRegister";
+import Auth from "../utils/Auth";
 
 const Header = () => {
   const location = useLocation();
   const show = location.pathname === "/" ? true : false;
   const [active, setActive] = useState(false);
-  const accessToken = localStorage.getItem("access_token");
+  // const accessToken = localStorage.getItem("access_token");
 
   const openSidebar = () => {
     setActive(true);
@@ -18,25 +21,25 @@ const Header = () => {
     setActive(false);
   };
 
-  function LogoutButton() {
-    const handleClick = () => {
-      localStorage.clear();
-    };
+  // function LogoutButton() {
+  //   const handleClick = () => {
+  //     localStorage.clear();
+  //   };
 
-    return (
-      <Link to="/" onClick={handleClick} className="btn logoutbtn">
-        Log out
-      </Link>
-    );
-  }
+  //   return (
+  //     <Link to="/" onClick={handleClick} className="btn logoutbtn">
+  //       Log out
+  //     </Link>
+  //   );
+  // }
 
-  function RegisterButton() {
-    return (
-      <Link to={"/sign-up"} className="btn">
-        Register
-      </Link>
-    );
-  }
+  // function RegisterButton() {
+  //   return (
+  // <Link to={"/sign-up"} className="btn">
+  //   Register
+  // </Link>
+  //   );
+  // }
 
   return (
     <header className="header-nav">
@@ -71,7 +74,11 @@ const Header = () => {
                     <a href="#faq">FAQ</a>
                   </li>
                   <li className="buttonregist">
-                    {accessToken ? <LogoutButton /> : <RegisterButton />}
+                    {Auth.isAuthorization() ? (
+                      <LogoutButton />
+                    ) : (
+                      <RegisterButton />
+                    )}
                   </li>
                 </ul>
               </div>
@@ -105,7 +112,11 @@ const Header = () => {
                     <a href="/#faq">FAQ</a>
                   </li>
                   <li className="buttonregist">
-                    {accessToken ? <LogoutButton /> : <RegisterButton />}
+                    {Auth.isAuthorization() ? (
+                      <LogoutButton />
+                    ) : (
+                      <RegisterButton />
+                    )}
                   </li>
                 </ul>
               </div>

@@ -111,7 +111,7 @@
 
 .btn:disabled {
   background-color: rgba(53, 176, 167, 0.2) !important;
-  border-radius: 2px !important;
+  border-radius: 6px !important;
 }
 
 .css-1insrsq-control {
@@ -136,7 +136,7 @@ input[disabled] {
 
 .backButton a {
   background: #5CB85F;
-  border-radius: 20px;
+  border-radius: 6px;
   border-color: #5CB85F;
   color: #FFFFFF;
 
@@ -155,7 +155,18 @@ input[disabled] {
   font-family: 'Arial';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  padding: 20px 0 10px 20px;
+}
+
+.package-desc h4 {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  opacity: 90%;
+  font-size: 16px;
   line-height: 20px;
   color: #000000;
   padding: 20px 0 10px 20px;
@@ -202,11 +213,11 @@ input[disabled] {
   font-family: 'Arial';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 20px;
   color: #000000;
   padding: 4px 0 5px;
-  margin: 0;
+  margin-bottom: 6px;
 }
 
 .card-detail .card-body .category {
@@ -214,7 +225,7 @@ input[disabled] {
   font-family: 'Arial';
   font-style: normal;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 14px;
   color: #8A8A8A;
 }
@@ -254,19 +265,23 @@ input[disabled] {
 }
 
 .backButton2 a {
-  background: #5CB85F;
+  background: #0084ff;
   border-radius: 20px;
-  border-color: #5CB85F;
+  border-color: #0084ff;
   font-size: 14px;
   color: #FFFFFF;
 }
 
+.backButton2 a:hover {
+  background: #0061bc;
+}
+
 .btn:hover {
-  color: #212529;
+  color: #ffffff;
 }
 
 .btn:focus {
-  color: #212529;
+  color: #ffffff;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #C9E7CA;
 }
@@ -294,14 +309,14 @@ input[disabled] {
 
 .btn-success {
   border: none;
-  background-color: #5CB85F !important;
+  background-color: #5CB85F;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 8px 12px;
   gap: 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   width: 100%;
   color: #FFFFFF;
   font-family: 'Arial';
@@ -309,7 +324,10 @@ input[disabled] {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
+}
 
+.btn-success:hover {
+  background-color: rgb(41, 153, 45);
 }
 
 @media (max-width:991px) {
