@@ -7,6 +7,7 @@ import Filter from "./Filter";
 import noCar from "../assets/images/no-car.webp";
 import placeholderImg from "..//assets/images/placeholder-img.webp";
 import "../assets/css/HasilPencarian.css";
+import Skeleton from "react-loading-skeleton";
 
 const FindResult = ({ setHeroVisible }) => {
   const [cars, setCars] = useState([]);
@@ -87,6 +88,14 @@ const FindResult = ({ setHeroVisible }) => {
     setHeroVisible,
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <div className="findResult">
       <div className="container">
@@ -113,34 +122,43 @@ const FindResult = ({ setHeroVisible }) => {
                   {cars.map((car, index) => {
                     return (
                       <div className="col-lg-4 col-md-6" key={index}>
-                        <div className="card-border">
-                          <div className="card">
-                            <img
-                              src={
-                                car.image !== null ? car.image : placeholderImg
-                              }
-                              className="card-img-top"
-                              alt="..."
-                            />
-                            <div className="card-body">
-                              <h5 className="card-title">{car.name}</h5>
-                              <h4 className="price">
-                                Rp {currencyFormat(car.price)} / hari
-                              </h4>
-                              <p className="card-text">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.{" "}
-                              </p>
-                              <Link
-                                className="btn"
-                                to={`/detail-mobil/${car.id}`}
-                              >
-                                Pilih Mobil
-                              </Link>
+                        {isLoading ? (
+                          <Skeleton
+                            style={{ marginBottom: "20px", height: "420px" }}
+                          />
+                        ) : (
+                          <div className="card-border">
+                            <div className="card">
+                              <img
+                                src={
+                                  car.image !== null
+                                    ? car.image
+                                    : placeholderImg
+                                }
+                                className="card-img-top"
+                                alt="..."
+                              />
+
+                              <div className="card-body">
+                                <h5 className="card-title">{car.name}</h5>
+                                <h4 className="price">
+                                  Rp {currencyFormat(car.price)} / hari
+                                </h4>
+                                <p className="card-text">
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.{" "}
+                                </p>
+                                <Link
+                                  className="btn"
+                                  to={`/detail-mobil/${car.id}`}
+                                >
+                                  Pilih Mobil
+                                </Link>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        )}
                       </div>
                     );
                   })}
