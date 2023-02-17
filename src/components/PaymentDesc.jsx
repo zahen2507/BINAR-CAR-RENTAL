@@ -71,6 +71,7 @@ const PaymentDesc = () => {
       window.localStorage.setItem("Total_Harga", Total);
     } catch (error) {
       console.error(error);
+      alert("Failed to order");
     }
   };
 

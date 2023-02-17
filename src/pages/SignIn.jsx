@@ -83,7 +83,7 @@ const SignIn = () => {
                 </div>
                 <h1>Welcome Back! </h1>
                 <Alert
-                  style={{ width: "auto", float: "right" }}
+                  style={{ width: "auto", float: "right", lineHeight: "1.5" }}
                   show={alertFail}
                   variant="danger"
                   onClose={() => setAlertFail(false)}
