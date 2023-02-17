@@ -1,5 +1,5 @@
-import { React, useEffect } from "react";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { React, useEffect, useState } from "react";
+import { Container, Row, Col, Button, Form, Alert } from "react-bootstrap";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import APIAuth from "../apis/APIAuth";
 import Loginkanan from "../assets/images/login.svg";
@@ -10,6 +10,7 @@ import "../assets/css/SignIn.css";
 // import axios from "axios";
 
 const SignIn = () => {
+  const [alertFail, setAlertFail] = useState(false);
   useEffect(() => {
     document.title = "Binar Car Rental - Sign In for Rent";
   }, []);
@@ -56,8 +57,10 @@ const SignIn = () => {
           navigate(returnTo);
         }, 1000);
       } catch (error) {
-        const err = new Error(error);
-        console.log(err.response.data);
+        // const err = new Error(error);
+        // console.log(err.response.data);
+        // alert("eror");
+        setAlertFail(true);
       }
     };
     handleSubmit();
@@ -69,7 +72,7 @@ const SignIn = () => {
         <Row>
           <Col className="login-kiri" sm={12} lg={6} xl={6}>
             <div className="login-box">
-              <div className="login-konten">
+              <div className="login-konten" style={{ width: "min-content" }}>
                 <div className="logo-login">
                   <a href="/">
                     <img src={Logologin} alt="BCR" className="homelogo" />
@@ -79,6 +82,18 @@ const SignIn = () => {
                   </Link>
                 </div>
                 <h1>Welcome Back! </h1>
+                <Alert
+                  style={{ width: "auto", float: "right", lineHeight: "1.5" }}
+                  show={alertFail}
+                  variant="danger"
+                  onClose={() => setAlertFail(false)}
+                  dismissible
+                >
+                  <small>
+                    Masukkan username dan password yang benar. Perhatikan
+                    penggunaan huruf kapital.
+                  </small>
+                </Alert>
                 <Form onSubmit={onFinish}>
                   <Form.Group className="mb-3 email" controlId="formBasicEmail">
                     <Form.Label>
