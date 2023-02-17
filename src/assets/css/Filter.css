@@ -116,6 +116,11 @@ input::placeholder {
   padding-bottom: 8px;
 }
 
+.button button:hover {
+  color: #FFFFFF;
+  background-color: rgb(41, 153, 45);
+}
+
 .button.btn:focus {
   color: #212529;
   outline: 0;

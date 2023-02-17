@@ -5,6 +5,7 @@ const NotFoundPage = () => {
   return (
     <div
       style={{ textAlign: "center", paddingTop: "20vh" }}
+      // eslint-disable-next-line
       role="notFoundPage"
     >
       <h1

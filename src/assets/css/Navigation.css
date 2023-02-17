@@ -2,7 +2,7 @@
   width: 100%;
   padding: 20px;
   position: fixed;
-  background: #F1F3FF;
+  background: #f1f3ff;
   z-index: 99;
 }
 
@@ -24,7 +24,7 @@
 
 .navbar a {
   margin-left: 32px;
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -39,7 +39,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-  background-color: #5CB85F;
+  background-color: #5cb85f;
   color: white;
   border-radius: 20px;
   margin-top: 0;
@@ -50,28 +50,26 @@
 
 .logoutbtn {
   background-color: white !important;
-  color: #0D28A6 !important;
-  border: 1px solid #0D28A6 !important;
+  color: #0d28a6 !important;
+  border: 1px solid #0d28a6 !important;
   border-radius: 2px !important;
-  
 }
 
 .navbar a:hover {
-  color: #0D28A6 !important;
+  color: #0d28a6 !important;
   text-decoration: none;
 }
 
 a.btn:hover {
-  color: rgb(255, 255, 255) !important;
+  color: #ffffff !important;
   background-color: rgb(41, 153, 45);
   text-decoration: none !important;
 }
 
 .logoutbtn:hover {
-  color: #0D28A6 !important;
+  color: #0d28a6 !important;
+  background-color: #f1f1f1 !important;
 }
-
-
 
 .sidebar {
   flex: 1;
@@ -97,7 +95,7 @@ li.buttonregist {
   display: none;
 }
 
-@media (max-width:540px) {
+@media (max-width: 540px) {
   .navbar a {
     margin-left: 0 !important;
   }
@@ -108,7 +106,7 @@ li.buttonregist {
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .burger-icon {
     display: flex;
     flex: 1;
@@ -127,7 +125,7 @@ li.buttonregist {
     top: 0;
     right: -180px;
     padding-top: 20px;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     z-index: 1;
     transition: 1s;

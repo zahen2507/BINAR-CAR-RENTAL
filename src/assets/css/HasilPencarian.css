@@ -32,11 +32,11 @@
 }
 
 .car-choice .card-body h5 {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 0px;
   color: #000000;
-  padding: 4px 0 5px;
+  padding: 1px 0 1px;
   margin: 0;
 }
 
@@ -80,13 +80,15 @@
 }
 
 .car-choice-border .btn:hover {
-  color: #212529 !important;
+  color: #ffffff !important;
+  background-color: rgb(41, 153, 45);
 }
 
 .car-choice-border .btn:focus {
-  color: #212529 !important;
+  color: #ffffff !important;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #C9E7CA;
+  text-decoration: none;
 }
 
 .car-choice .noData {

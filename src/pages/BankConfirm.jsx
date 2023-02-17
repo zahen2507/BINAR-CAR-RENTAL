@@ -1,11 +1,8 @@
-import React from 'react';
-import BankPayment from '../components/BankPayment';
+import React from "react";
+import BankPayment from "../components/BankPayment";
 
 const BankConfirm = () => {
-
-    return (
-        <BankPayment />
-    )
-}
+  return <BankPayment />;
+};
 
 export default BankConfirm;

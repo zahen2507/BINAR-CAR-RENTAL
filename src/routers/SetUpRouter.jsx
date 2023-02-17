@@ -10,13 +10,14 @@ import Signin from "../pages/SignIn";
 import Payment from "../pages/Payment";
 import BankConfirm from "../pages/BankConfirm";
 import ETicket from "../pages/ETicket";
+import Auth from "../utils/Auth"
 import NotFoundPage from "../components/NotFoundPage";
 
 const WithAuth = () => {
-  const isAuth = window.localStorage.getItem("access_token");
+  const isAuth = Auth.isAuthorization()
   return (
     <>
-      {!isAuth && <Navigate to={"/sign-up"} />}
+      {!isAuth && <Navigate to={"/sign-in"} />}
       <Outlet />
     </>
   );
