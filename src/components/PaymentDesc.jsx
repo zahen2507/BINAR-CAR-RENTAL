@@ -70,6 +70,7 @@ const PaymentDesc = () => {
       );
       window.localStorage.setItem("order_id", response.data.id);
       window.localStorage.setItem("Total_Harga", Total);
+      alert("berhasil");
     } catch (error) {
       console.error(error);
       console.log(error);
