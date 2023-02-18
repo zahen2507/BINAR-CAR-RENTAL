@@ -6,6 +6,7 @@ import Signupkanan from "../assets/images/login.svg";
 import Logoregister from "../assets/images/logo.svg";
 import Closelogo from "../assets/images/close.svg";
 import "../assets/css/SignUp.scss";
+import { Helmet } from "react-helmet";
 // import { useState } from "react";
 // import axios from "axios";
 
@@ -73,6 +74,14 @@ const SignUp = () => {
 
   return (
     <div className="signup">
+      <Helmet>
+        <title>Sign Up</title>
+        <meta name="description" content="Daftar untuk menyewa mobil" />
+        <meta
+          name="keywords"
+          content="sewa mobil, car rental, binar, binar car rental, penyewaan mobil, cari mobil, binar, rental car, sewa mobil murah, cheap car rental, website sewa mobil"
+        />
+      </Helmet>
       <Container fluid>
         <Row>
           <Col className="signup-kiri" sm={12} lg={6} xl={6}>
