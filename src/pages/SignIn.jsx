@@ -6,6 +6,7 @@ import Loginkanan from "../assets/images/login.svg";
 import Logologin from "../assets/images/logo.svg";
 import Closelogo from "../assets/images/close.svg";
 import "../assets/css/SignIn.css";
+import { Helmet } from "react-helmet";
 // import { useState } from "react";
 // import axios from "axios";
 
@@ -68,6 +69,17 @@ const SignIn = () => {
 
   return (
     <div className="login">
+      <Helmet>
+        <title>Sign In</title>
+        <meta
+          name="description"
+          content="Masuk ke akun yang usdaah ada untuk menyewa mobil"
+        />
+        <meta
+          name="keywords"
+          content="sewa mobil, car rental, binar, binar car rental, penyewaan mobil, cari mobil, binar, rental car, sewa mobil murah, cheap car rental, website sewa mobil"
+        />
+      </Helmet>
       <Container fluid>
         <Row>
           <Col className="login-kiri" sm={12} lg={6} xl={6}>
