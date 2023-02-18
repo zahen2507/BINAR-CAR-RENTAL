@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/Footer.css";
 import Logo from "../assets/images/logo.svg";
 import FbIcon from "../assets/icons/icon_facebook.svg";
@@ -59,7 +60,9 @@ const Footer = () => {
           <div className="col-lg-2 col-md-4">
             <div className="copyright">
               <h4>&copy; Copyright Binar 2022</h4>
-              <img src={Logo} alt="" />
+              <Link to={"/"} className="logo-sidebar">
+                <img src={Logo} className="logoFooter" alt="" />
+              </Link>
             </div>
           </div>
         </div>

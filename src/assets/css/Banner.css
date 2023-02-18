@@ -3,7 +3,7 @@
 }
 
 .cta-body {
-  background: #0D28A6;
+  background: #0d28a6;
   border-radius: 13px;
   text-align: center;
 }
@@ -12,7 +12,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 150%;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-top: 64px;
 }
 
@@ -20,28 +20,29 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 16px 32% 0;
 }
 
 .cta-body a {
-  background: #5CB85F;
-  border-color: #5CB85F;
-  border-radius: 20px;
+  background: #5cb85f;
+  border-color: #5cb85f;
+  border-radius: 2px;
+  padding: 8px 12px;
+  margin: 52px 0 64px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
-  margin: 52px 0 64px;
+  line-height: 1.5;
+  color: #ffffff;
 }
 
 .cta-banner.btn:focus {
   color: #212529;
   outline: 0;
-  box-shadow: 0 0 0 0.15rem #C9E7CA;
+  box-shadow: 0 0 0 0.15rem #c9e7ca;
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .cta-banner {
     padding-left: 15px;
     padding-right: 15px;

@@ -1,7 +1,7 @@
 .filter-border {
   width: 90%;
   position: relative;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 10px rgb(0 0 0 / 15%);
   border-radius: 8px;
   margin: auto;
@@ -32,16 +32,16 @@
 }
 
 .form-border {
-  padding: 10px;
+  padding: 18px;
 }
 
 .form-label {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 18px;
-  color: #3C3C3C;
+  color: #3c3c3c;
 }
 
 input::placeholder {
@@ -49,39 +49,39 @@ input::placeholder {
 }
 
 .form-control {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 18px;
-  color: #3C3C3C;
+  color: #3c3c3c;
   height: 38px;
 }
 
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #5CB85F;
+  border-color: #5cb85f;
   outline: 0;
-  box-shadow: 0 0 0 1px #5CB85F;
+  box-shadow: 0 0 0 1px #5cb85f;
 }
 
 .form-select {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 18px;
-  color: #3C3C3C;
+  color: #3c3c3c;
 }
 
 .select-form {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 18px;
-  color: #3C3C3C;
+  color: #3c3c3c;
 }
 
 .submit {
@@ -90,41 +90,41 @@ input::placeholder {
 
 .submit .btn-active {
   background-color: white;
-  color: #0D28A6;
+  color: #0d28a6;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   width: 70px;
   height: 36px;
-  border: 1px solid #0D28A6;
+  border: 1px solid #0d28a6;
   border-radius: 2px;
   margin-left: -20px !important;
 }
 
 .button button {
-  font-family: 'Arial';
+  font-family: "Arial";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  color: #FFFFFF;
-  background: #5CB85F;
+  color: #ffffff;
+  background: #5cb85f;
   border-radius: 5px;
-  border-color: #5CB85F;
+  border-color: #5cb85f;
   padding-top: 9px;
   padding-bottom: 8px;
 }
 
 .button button:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: rgb(41, 153, 45);
 }
 
 .button.btn:focus {
   color: #212529;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem #C9E7CA;
+  box-shadow: 0 0 0 0.25rem #c9e7ca;
 }
 
 .button .btn {
@@ -151,7 +151,7 @@ input::placeholder {
   z-index: 100;
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .filter-border {
     padding-bottom: 5px;
   }
@@ -174,7 +174,7 @@ input::placeholder {
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .filter-border {
     width: 100%;
     margin-top: -70px;
@@ -183,9 +183,9 @@ input::placeholder {
 
 /* styling react select (form)*/
 .form-select:focus {
-  border-color: #5CB85F;
+  border-color: #5cb85f;
   outline: 0;
-  box-shadow: 0 0 0 1px #5CB85F;
+  box-shadow: 0 0 0 1px #5cb85f;
 }
 
 .select__indicator-separator {
@@ -193,23 +193,23 @@ input::placeholder {
 }
 
 .css-1pahdxg-control {
-  border-color: #5CB85F !important;
-  box-shadow: 0 0 0 1px #5CB85F !important;
+  border-color: #5cb85f !important;
+  box-shadow: 0 0 0 1px #5cb85f !important;
 }
 
 .css-1pahdxg-control:hover {
-  border-color: #5CB85F !important;
-  box-shadow: 0 0 0 1px #5CB85F !important;
+  border-color: #5cb85f !important;
+  box-shadow: 0 0 0 1px #5cb85f !important;
 }
 
 .css-9gakcf-option {
-  background-color: #C9E7CA !important;
-  color: #5CB85F !important;
+  background-color: #c9e7ca !important;
+  color: #5cb85f !important;
   font-weight: 700;
 }
 
 .css-1n7v3ny-option {
-  background-color: #C9E7CA !important;
-  color: #5CB85F !important;
+  background-color: #c9e7ca !important;
+  color: #5cb85f !important;
   font-weight: 700;
 }
