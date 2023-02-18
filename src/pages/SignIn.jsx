@@ -59,7 +59,7 @@ const SignIn = () => {
       } catch (error) {
         // const err = new Error(error);
         // console.log(err.response.data);
-        // alert("eror");
+        // alert("error");
         setAlertFail(true);
       }
     };

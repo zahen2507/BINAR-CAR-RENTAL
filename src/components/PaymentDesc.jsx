@@ -10,6 +10,7 @@ import { currencyFormat } from "../helper";
 import moment from "moment";
 import "moment/locale/id";
 import "../assets/css/PaymentDesc.css";
+import Auth from "../utils/Auth";
 
 const PaymentDesc = () => {
   const [selected, setSelected] = useState();
@@ -27,7 +28,7 @@ const PaymentDesc = () => {
   const totalHari = localStorage.getItem("Jumlah_Hari");
   const startRent = localStorage.getItem("start_rent");
   const endRent = localStorage.getItem("end_rent");
-  const token = localStorage.getItem("access_token");
+  const token = Auth.getAccessToken();
   const id_car = localStorage.getItem("id_car");
   const [detail, setDetail] = useState({});
   let { id } = useParams();
@@ -71,6 +72,8 @@ const PaymentDesc = () => {
       window.localStorage.setItem("Total_Harga", Total);
     } catch (error) {
       console.error(error);
+      console.log(error);
+      console.log(error.response);
       alert("Failed to order");
     }
   };
