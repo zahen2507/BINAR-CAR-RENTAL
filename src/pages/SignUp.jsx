@@ -1,12 +1,12 @@
 import { React, useEffect } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import APIReg from "../apis/APIReg";
 import Signupkanan from "../assets/images/login.svg";
 import Logoregister from "../assets/images/logo.svg";
 import Closelogo from "../assets/images/close.svg";
 import "../assets/css/SignUp.scss";
-import { Helmet } from "react-helmet";
 // import { useState } from "react";
 // import axios from "axios";
 

@@ -1,12 +1,12 @@
 import { React, useEffect, useState } from "react";
 import { Container, Row, Col, Button, Form, Alert } from "react-bootstrap";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import APIAuth from "../apis/APIAuth";
 import Loginkanan from "../assets/images/login.svg";
 import Logologin from "../assets/images/logo.svg";
 import Closelogo from "../assets/images/close.svg";
 import "../assets/css/SignIn.css";
-import { Helmet } from "react-helmet";
 // import { useState } from "react";
 // import axios from "axios";
 
@@ -73,7 +73,7 @@ const SignIn = () => {
         <title>Sign In</title>
         <meta
           name="description"
-          content="Masuk ke akun yang usdaah ada untuk menyewa mobil"
+          content="Masuk ke akun yang sudah ada untuk menyewa mobil"
         />
         <meta
           name="keywords"
