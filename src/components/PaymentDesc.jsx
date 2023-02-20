@@ -11,6 +11,7 @@ import moment from "moment";
 import "moment/locale/id";
 import "../assets/css/PaymentDesc.css";
 import Auth from "../utils/Auth";
+import Skeleton from "react-loading-skeleton";
 
 const PaymentDesc = () => {
   const [selected, setSelected] = useState();
@@ -76,6 +77,14 @@ const PaymentDesc = () => {
     }
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <section className="payment-desc">
       <div className="bg" />
@@ -112,35 +121,73 @@ const PaymentDesc = () => {
             <div className="disabled">
               <div className="col-12">
                 <div className="row">
-                  <h3>Detail Pesananmu</h3>
+                  {isLoading ? (
+                    <Skeleton width={120} style={{ marginBottom: "10px" }} />
+                  ) : (
+                    <h3>Detail Pesananmu</h3>
+                  )}
                   <div className="col-lg-3">
-                    <h4>Nama/Tipe Mobil</h4>
-                    <div className="car-name">{detail.name}</div>
+                    {isLoading ? (
+                      <Skeleton width={100} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <h4>Nama/Tipe Mobil</h4>
+                    )}
+                    {isLoading ? (
+                      <Skeleton width={150} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <div className="car-name">{detail.name}</div>
+                    )}
+                  </div>
+
+                  <div className="col-lg-3">
+                    {isLoading ? (
+                      <Skeleton width={100} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <h4>Kategori</h4>
+                    )}
+                    {isLoading ? (
+                      <Skeleton width={150} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <div className="category">
+                        {(() => {
+                          switch (detail.category) {
+                            case "small":
+                              return "2-4 orang";
+                            case "medium":
+                              return "4-6 orang";
+                            case "large":
+                              return "6-8 orang";
+                            default:
+                              return "-";
+                          }
+                        })()}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="col-lg-3">
+                    {isLoading ? (
+                      <Skeleton width={100} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <h4>Tanggal Mulai Sewa</h4>
+                    )}
+                    {isLoading ? (
+                      <Skeleton width={150} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <div className="start-rent">{mulaiSewa}</div>
+                    )}
                   </div>
                   <div className="col-lg-3">
-                    <h4>Kategori</h4>
-                    <div className="category">
-                      {(() => {
-                        switch (detail.category) {
-                          case "small":
-                            return "2-4 orang";
-                          case "medium":
-                            return "4-6 orang";
-                          case "large":
-                            return "6-8 orang";
-                          default:
-                            return "-";
-                        }
-                      })()}
-                    </div>
-                  </div>
-                  <div className="col-lg-3">
-                    <h4>Tanggal Mulai Sewa</h4>
-                    <div className="start-rent">{mulaiSewa}</div>
-                  </div>
-                  <div className="col-lg-3">
-                    <h4>Tanggal Akhir Sewa</h4>
-                    <div className="finish-rent">{akhirSewa}</div>
+                    {isLoading ? (
+                      <Skeleton width={100} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <h4>Tanggal Akhir Sewa</h4>
+                    )}
+                    {isLoading ? (
+                      <Skeleton width={150} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <div className="finish-rent">{akhirSewa}</div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -153,11 +200,19 @@ const PaymentDesc = () => {
             <div className="row">
               <div className="col-lg-7 col-md-12">
                 <div className="choose-bank">
-                  <h3>Pilih Bank Transfer</h3>
-                  <p>
-                    Kamu bisa membayar dengan transfer melalui ATM, Internet
-                    Banking atau Mobile Banking
-                  </p>
+                  {isLoading ? (
+                    <Skeleton width={100} style={{ marginBottom: "10px" }} />
+                  ) : (
+                    <h3>Pilih Bank Transfer</h3>
+                  )}
+                  {isLoading ? (
+                    <Skeleton width={200} style={{ marginBottom: "10px" }} />
+                  ) : (
+                    <p>
+                      Kamu bisa membayar dengan transfer melalui ATM, Internet
+                      Banking atau Mobile Banking
+                    </p>
+                  )}
                   <ul>
                     <li
                       className={selected === 1 ? "active" : null}
@@ -167,8 +222,26 @@ const PaymentDesc = () => {
                       }}
                     >
                       <div className="cont">
-                        <div className="bank">BCA</div>
-                        <h5>BCA Transfer</h5>
+                        {isLoading ? (
+                          <Skeleton
+                            width={70}
+                            style={{
+                              marginBottom: "10px",
+                              marginRight: "12px",
+                              height: "30px",
+                            }}
+                          />
+                        ) : (
+                          <div className="bank">BCA</div>
+                        )}
+                        {isLoading ? (
+                          <Skeleton
+                            width={100}
+                            style={{ marginBottom: "10px" }}
+                          />
+                        ) : (
+                          <h5>BCA Transfer</h5>
+                        )}
                       </div>
                       {selected === 1 ? (
                         <img src={Check} alt="check-list" />
@@ -182,8 +255,26 @@ const PaymentDesc = () => {
                       }}
                     >
                       <div className="cont">
-                        <div className="bank">BNI</div>
-                        <h5>BNI Transfer</h5>
+                        {isLoading ? (
+                          <Skeleton
+                            width={70}
+                            style={{
+                              marginBottom: "10px",
+                              marginRight: "12px",
+                              height: "30px",
+                            }}
+                          />
+                        ) : (
+                          <div className="bank">BNI</div>
+                        )}
+                        {isLoading ? (
+                          <Skeleton
+                            width={100}
+                            style={{ marginBottom: "10px" }}
+                          />
+                        ) : (
+                          <h5>BNI Transfer</h5>
+                        )}
                       </div>
                       {selected === 2 ? (
                         <img src={Check} alt="check-list" />
@@ -197,8 +288,26 @@ const PaymentDesc = () => {
                       }}
                     >
                       <div className="cont">
-                        <div className="bank">Mandiri</div>
-                        <h5>Mandiri Transfer</h5>
+                        {isLoading ? (
+                          <Skeleton
+                            width={70}
+                            style={{
+                              marginBottom: "10px",
+                              marginRight: "12px",
+                              height: "30px",
+                            }}
+                          />
+                        ) : (
+                          <div className="bank">Mandiri</div>
+                        )}
+                        {isLoading ? (
+                          <Skeleton
+                            width={100}
+                            style={{ marginBottom: "10px" }}
+                          />
+                        ) : (
+                          <h5>Mandiri Transfer</h5>
+                        )}
                       </div>
                       {selected === 3 ? (
                         <img src={Check} alt="check-list" />
@@ -207,82 +316,190 @@ const PaymentDesc = () => {
                   </ul>
                 </div>
               </div>
+
               <div className="col-lg-5 col-md-12">
                 <div className="detail-payment">
-                  <h5>{detail.name}</h5>
-                  <div className="category">
-                    <img src={UserIcon} alt="" />
-                    <p>
-                      {" "}
-                      {(() => {
-                        switch (detail.category) {
-                          case "small":
-                            return "2-4 orang";
-                          case "medium":
-                            return "4-6 orang";
-                          case "large":
-                            return "6-8 orang";
-                          default:
-                            return "-";
-                        }
-                      })()}
-                    </p>
-                  </div>
+                  {isLoading ? (
+                    <Skeleton width={100} style={{ marginBottom: "10px" }} />
+                  ) : (
+                    <h5>{detail.name}</h5>
+                  )}
+                  {isLoading ? (
+                    <Skeleton width={60} />
+                  ) : (
+                    <div className="category">
+                      <img src={UserIcon} alt="" />
+                      <p>
+                        {" "}
+                        {(() => {
+                          switch (detail.category) {
+                            case "small":
+                              return "2-4 orang";
+                            case "medium":
+                              return "4-6 orang";
+                            case "large":
+                              return "6-8 orang";
+                            default:
+                              return "-";
+                          }
+                        })()}
+                      </p>
+                    </div>
+                  )}
                   <div className="calc">
                     <div className="total-calc">
-                      <div className="total">
-                        <h5>Total</h5>
-                        <img
-                          src={UpDown}
-                          onClick={() => setIsToggled(!isToggled)}
-                          style={styleToggled}
-                          alt="see calculation"
+                      {isLoading ? (
+                        <Skeleton
+                          width={100}
+                          style={{ marginBottom: "10px" }}
                         />
-                      </div>
-                      <h5>Rp {currencyFormat(Total)}</h5>
+                      ) : (
+                        <div className="total">
+                          <h5>Total</h5>
+                          <img
+                            src={UpDown}
+                            onClick={() => setIsToggled(!isToggled)}
+                            style={styleToggled}
+                            alt="see calculation"
+                          />
+                        </div>
+                      )}
+                      {isLoading ? (
+                        <Skeleton
+                          width={100}
+                          style={{ marginBottom: "10px" }}
+                        />
+                      ) : (
+                        <h5>Rp {currencyFormat(Total)}</h5>
+                      )}
                     </div>
                     {isToggled ? (
                       <div className="detail">
-                        <h5 className="title">Harga</h5>
+                        {isLoading ? (
+                          <Skeleton
+                            width={100}
+                            style={{ marginBottom: "10px" }}
+                          />
+                        ) : (
+                          <h5 className="title">Harga</h5>
+                        )}
                         <ul>
                           <li>
-                            <p>
-                              Sewa Mobil Rp {currencyFormat(detail.price)} x{" "}
-                              {totalHari}
-                            </p>
-                            <h5>Rp {currencyFormat(Total)}</h5>
+                            {isLoading ? (
+                              <Skeleton
+                                width={100}
+                                style={{ marginBottom: "10px" }}
+                              />
+                            ) : (
+                              <p>
+                                Sewa Mobil Rp {currencyFormat(detail.price)} x{" "}
+                                {totalHari}
+                              </p>
+                            )}
+                            {isLoading ? (
+                              <Skeleton
+                                width={100}
+                                style={{ marginBottom: "10px" }}
+                              />
+                            ) : (
+                              <h5>Rp {currencyFormat(Total)}</h5>
+                            )}
                           </li>
                         </ul>
-                        <h5 className="title">Biaya Lainnya</h5>
+                        {isLoading ? (
+                          <Skeleton
+                            width={100}
+                            style={{ marginBottom: "10px" }}
+                          />
+                        ) : (
+                          <h5 className="title">Biaya Lainnya</h5>
+                        )}
                         <ul>
                           <li>
-                            <p>Pajak</p>
-                            <h6>Termasuk</h6>
+                            {isLoading ? (
+                              <Skeleton
+                                width={100}
+                                style={{ marginBottom: "10px" }}
+                              />
+                            ) : (
+                              <p>Pajak</p>
+                            )}
+                            {isLoading ? (
+                              <Skeleton
+                                width={100}
+                                style={{ marginBottom: "10px" }}
+                              />
+                            ) : (
+                              <h6>Termasuk</h6>
+                            )}
                           </li>
                         </ul>
                         <ul>
                           <li>
-                            <p>Biaya makan sopir</p>
-                            <h6>Termasuk</h6>
+                            {isLoading ? (
+                              <Skeleton
+                                width={100}
+                                style={{ marginBottom: "10px" }}
+                              />
+                            ) : (
+                              <p>Biaya makan sopir</p>
+                            )}
+                            {isLoading ? (
+                              <Skeleton
+                                width={100}
+                                style={{ marginBottom: "10px" }}
+                              />
+                            ) : (
+                              <h6>Termasuk</h6>
+                            )}
                           </li>
                         </ul>
-                        <h5 className="title">Belum Termasuk</h5>
+                        {isLoading ? (
+                          <Skeleton
+                            width={100}
+                            style={{ marginBottom: "10px" }}
+                          />
+                        ) : (
+                          <h5 className="title">Belum Termasuk</h5>
+                        )}
                         <ul>
                           <li>
-                            <p>Bensin</p>
+                            {isLoading ? (
+                              <Skeleton
+                                width={100}
+                                style={{ marginBottom: "10px" }}
+                              />
+                            ) : (
+                              <p>Bensin</p>
+                            )}
                           </li>
                         </ul>
                         <ul>
                           <li>
-                            <p>Tol dan parkir</p>
+                            {isLoading ? (
+                              <Skeleton
+                                width={100}
+                                style={{ marginBottom: "10px" }}
+                              />
+                            ) : (
+                              <p>Tol dan parkir</p>
+                            )}
                           </li>
                         </ul>
                       </div>
                     ) : null}
                   </div>
                   <div className="result-calc">
-                    <h4>Total</h4>
-                    <h4>Rp {currencyFormat(Total)}</h4>
+                    {isLoading ? (
+                      <Skeleton width={100} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <h4>Total</h4>
+                    )}
+                    {isLoading ? (
+                      <Skeleton width={100} style={{ marginBottom: "10px" }} />
+                    ) : (
+                      <h4>Rp {currencyFormat(Total)}</h4>
+                    )}
                   </div>
                   <Link
                     style={selected ? styleLink : {}}

@@ -1,8 +1,8 @@
 import { React, useState } from "react";
+import { Helmet } from "react-helmet";
 import Welcome from "../components/Welcome";
 import FindResult from "../components/HasilPencarian";
 import Greyarea from "../components/GreyArea";
-import { Helmet } from "react-helmet";
 
 const FindCar = () => {
   const [heroVisible, setHeroVisible] = useState(true);

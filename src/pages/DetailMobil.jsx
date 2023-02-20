@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import Axios from "axios";
 import { currencyFormat } from "../helper";
-import UserIcon from "../assets/icons/user-icon.svg";
-import placeholderImg from "../assets/images/placeholder-img.webp";
 import { DateRangePicker } from "rsuite";
-import Button from "react-bootstrap/Button";
+import Axios from "axios";
 import moment from "moment";
 import "moment/locale/id";
+import Button from "react-bootstrap/Button";
+import Skeleton from "react-loading-skeleton";
 import Filter from "../components/Filter";
+import placeholderImg from "../assets/images/placeholder-img.webp";
+import UserIcon from "../assets/icons/user-icon.svg";
 import "../assets/css/DetailMobil.css";
-import { Helmet } from "react-helmet";
 
 const DetailMobil = () => {
   const [detail, setDetail] = useState({});
@@ -60,25 +60,27 @@ const DetailMobil = () => {
     }
   }, [id]);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
-    <>
-      <Helmet>
-        <title>Detail Mobil</title>
-        <meta name="description" content="Detail mobil, pilih Tanggal Sewa" />
-        <meta
-          name="keywords"
-          content="sewa mobil, car rental, binar, binar car rental, penyewaan mobil, cari mobil, binar, rental car,detail sewa mobil, sewa mobil murah, cheap car rental, website sewa mobil"
-        />
-      </Helmet>
-      <section>
-        <div className="backButton"></div>
-        <Filter />
-        <div className="car-desc">
-          <div className="container">
-            <div className="car-desc-border">
-              <div className="row">
-                <div className="col-lg-7 col-md-12">
-                  <div className="package-desc">
+    <section>
+      <div className="backButton"></div>
+      <Filter />
+      <div className="car-desc">
+        <div className="container">
+          <div className="car-desc-border">
+            <div className="row">
+              <div className="col-lg-7 col-md-12">
+                <div className="package-desc">
+                  {isLoading ? (
+                    <Skeleton style={{ height: "850px" }} />
+                  ) : (
                     <div className="card">
                       <h3>Tentang Paket</h3>
                       <h4>Include</h4>
@@ -128,10 +130,14 @@ const DetailMobil = () => {
                         <li>Tidak termasuk akomodasi penginapan</li>
                       </ul>
                     </div>
-                  </div>
+                  )}
                 </div>
-                <div className="col-lg-5 col-md-12">
-                  <div className="card-detail">
+              </div>
+              <div className="col-lg-5 col-md-12">
+                <div className="card-detail">
+                  {isLoading ? (
+                    <Skeleton style={{ height: "680px" }} />
+                  ) : (
                     <div className="card">
                       <img
                         src={
@@ -201,14 +207,14 @@ const DetailMobil = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

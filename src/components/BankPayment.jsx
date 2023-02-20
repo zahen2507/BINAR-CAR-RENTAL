@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ArrowLeft from "../assets/icons/arrow-left.svg";
 import { RotatingLines } from "react-loader-spinner";
+import { currencyFormat } from "./../helper";
+import ArrowLeft from "../assets/icons/arrow-left.svg";
 import Rect from "../assets/icons/rect.svg";
 import Copy from "../assets/icons/copy.svg";
 import Count1Day from "./Count1day";
 import ConfirmUpload from "./ConfirmUpload";
-import { currencyFormat } from "./../helper";
 import "../assets/css/BankPayment.css";
 
 const BankPayment = () => {
