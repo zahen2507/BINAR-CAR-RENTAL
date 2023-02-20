@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Form, Button } from "react-bootstrap";
 import PlaceHolder from "../assets/images/holder.png";
 import Count10Minute from "./Count10Minute";
 import "../assets/css/ConfirmUpload.css";
@@ -7,6 +8,7 @@ import APIOrder from "../apis/APIOrder";
 
 const ConfirmUpload = ({ orderId }) => {
   const reader = new FileReader();
+  const navigate = useNavigate();
   const [img, setImg] = useState(PlaceHolder);
 
   const imageHandler = (e) => {
@@ -18,12 +20,19 @@ const ConfirmUpload = ({ orderId }) => {
     reader.readAsDataURL(e.target.files[0]);
   };
 
-  const onFileUpload = async () => {
-    const formData = new FormData();
-    formData.append("slip", img);
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
     console.log(formData.get("slip"));
-    let response = await APIOrder.uploadPaymentSlip(orderId, formData);
-    console.log(response);
+    try {
+      let response = await APIOrder.uploadPaymentSlip(orderId, formData);
+      console.log(response);
+      if (response.status === 200) {
+        navigate(`e-ticket`);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -42,31 +51,32 @@ const ConfirmUpload = ({ orderId }) => {
         Untuk membantu kami lebih cepat melakukan pengecekan. Kamu bisa upload
         bukti bayarmu
       </p>
-      <div className="upload-img">
+      <Form onSubmit={onSubmit} className="upload-img">
         <div className="img">
           <img src={img} alt="upload-img" />
         </div>
-        <input
-          type="file"
-          accept="image/*"
-          name="image-upload"
-          id="input"
-          onChange={imageHandler}
-        />
-      </div>
-      {img === PlaceHolder ? (
-        <button
-          onClick={() => `if (reader.readyState === 2) {
+        <Form.Group controlId="slipUpload">
+          <Form.Control
+            name="slip"
+            type="file"
+            accept="image/*"
+            onChange={imageHandler}
+            hidden
+          />
+        </Form.Group>
+        {img === PlaceHolder ? (
+          <Button
+            type="button"
+            onClick={() => `if (reader.readyState === 2) {
           setImg(reader.result);
         }`}
-        >
-          <label htmlFor="input">Upload</label>
-        </button>
-      ) : (
-        <Link onClick={onFileUpload} to={"/payment/bank-confirm/e-ticket"}>
-          Konfirmasi
-        </Link>
-      )}
+          >
+            <label htmlFor="slipUpload">Upload</label>
+          </Button>
+        ) : (
+          <Button type="submit">Konfirmasi</Button>
+        )}
+      </Form>
     </section>
   );
 };
