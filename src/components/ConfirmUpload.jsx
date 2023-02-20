@@ -3,18 +3,27 @@ import { Link } from "react-router-dom";
 import PlaceHolder from "../assets/images/holder.png";
 import Count10Minute from "./Count10Minute";
 import "../assets/css/ConfirmUpload.css";
+import APIOrder from "../apis/APIOrder";
 
-const ConfirmUpload = () => {
+const ConfirmUpload = ({ orderId }) => {
+  const reader = new FileReader();
   const [img, setImg] = useState(PlaceHolder);
 
   const imageHandler = (e) => {
-    const reader = new FileReader();
-    reader.onload = () => {
+    reader.onload = function (e) {
       if (reader.readyState === 2) {
         setImg(reader.result);
       }
     };
     reader.readAsDataURL(e.target.files[0]);
+  };
+
+  const onFileUpload = async () => {
+    const formData = new FormData();
+    formData.append("slip", img);
+    console.log(formData.get("slip"));
+    let response = await APIOrder.uploadPaymentSlip(orderId, formData);
+    console.log(response);
   };
 
   return (
@@ -48,13 +57,15 @@ const ConfirmUpload = () => {
       {img === PlaceHolder ? (
         <button
           onClick={() => `if (reader.readyState === 2) {
-          setImg(reader.result)
+          setImg(reader.result);
         }`}
         >
           <label htmlFor="input">Upload</label>
         </button>
       ) : (
-        <Link to={"/payment/bank-confirm/e-ticket"}>Konfirmasi</Link>
+        <Link onClick={onFileUpload} to={"/payment/bank-confirm/e-ticket"}>
+          Konfirmasi
+        </Link>
       )}
     </section>
   );

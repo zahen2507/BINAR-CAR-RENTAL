@@ -415,7 +415,7 @@ const BankPayment = () => {
                               </button>
                             </div>
                           ) : (
-                            <ConfirmUpload />
+                            <ConfirmUpload orderId={orderID} />
                           )}
                         </div>
                       </div>

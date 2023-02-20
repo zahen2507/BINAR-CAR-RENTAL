@@ -21,8 +21,16 @@ const APIOrder = {
   },
 
   //Upload payment reciept (slip data hasn't been included)
-  uploadPaymentSlip: async (orderId) => {
-    const res = await axiosInstance.put(`/order/${orderId}/slip`);
+  uploadPaymentSlip: async (orderId, slipFormData) => {
+    const res = await axiosInstance.put(
+      `/order/${orderId}/slip`,
+      slipFormData,
+      {
+        headers: {
+          "Content-Type": `multipart/form-data`,
+        },
+      }
+    );
     return res;
   },
 
